@@ -1,1 +1,1 @@
-This folder is regerding week1 challenge
+This folder is regerding week1 challenge.
