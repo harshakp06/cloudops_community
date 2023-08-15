@@ -19,4 +19,4 @@ jobs:
       - name: adding html file to s3 bucket
         run: 
           # ls -al
-          aws s3 cp --recursive ./week1/index.html  s3://${{ secrets.AWS_S3_BUCKET }}
+          aws s3 cp ./week1/index.html  s3://${{ secrets.AWS_S3_BUCKET }}
