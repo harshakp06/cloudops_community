@@ -1,0 +1,22 @@
+name: Static Site Build Workflow
+run-name: ${{ github.actor }} is Running Workflow
+on: [push]
+
+  
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up AWS
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-south-2
+
+      - name: adding html file to s3 bucket
+        run: 
+          # ls -al
+          aws s3 cp --recursive ./week1  s3://${{ secrets.AWS_S3_BUCKET }}
