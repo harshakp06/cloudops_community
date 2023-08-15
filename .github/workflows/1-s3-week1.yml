@@ -1,6 +1,6 @@
 name: Upload html file to s3 bucket 
 
-on: [push]
+on: [workflow_dispatch]
   #workflow_dispatch 
    #push:
     #branches:
