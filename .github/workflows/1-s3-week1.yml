@@ -5,6 +5,7 @@ on:
    push:
     branches:
      - master
+     - week1
 
 jobs:
   deploy:
