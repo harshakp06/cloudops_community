@@ -1,11 +1,11 @@
 name: Upload html file to s3 bucket 
 
-on:
+on: [push]
   #workflow_dispatch 
-   push:
-    branches:
-     - master
-     - week1
+   #push:
+    #branches:
+     #- master
+     #- week1
 
 jobs:
   build:
