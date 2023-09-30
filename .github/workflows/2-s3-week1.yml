@@ -1,6 +1,6 @@
 name: Static Site Build Workflow
 run-name: ${{ github.actor }} is Running Workflow
-on: [push]
+on: [workflow_dispatch]
 
   
 jobs:
